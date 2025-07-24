@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the GitHub repository URL
-REPO_URL="https://github.com/your-username/your-repository.git"
-REPO_DIR="your-repository"  # Name of the folder where the repo will be cloned
+REPO_URL="https://github.com/pranshigpt28/Projects.git"
+REPO_DIR="Projects"  # Name of the folder where the repo will be cloned
 
 # Check if the repository folder exists
 if [ ! -d "$REPO_DIR" ]; then
@@ -10,7 +10,7 @@ if [ ! -d "$REPO_DIR" ]; then
   git clone "$REPO_URL"
 else
   echo "Repository found, pulling latest changes..."
-  cd "$REPO_DIR" && git pull origin main  # or 'master', depending on your branch
+  cd "$REPO_DIR" && git pull origin Release  # Replace 'Release' with your desired branch name
 fi
 
 # Print a simple message to confirm the script ran
