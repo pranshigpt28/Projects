@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Define the GitHub repository URL
+REPO_URL="https://github.com/your-username/your-repository.git"
+REPO_DIR="your-repository"  # Name of the folder where the repo will be cloned
+
+# Check if the repository folder exists
+if [ ! -d "$REPO_DIR" ]; then
+  echo "Repository not found, cloning..."
+  git clone "$REPO_URL"
+else
+  echo "Repository found, pulling latest changes..."
+  cd "$REPO_DIR" && git pull origin main  # or 'master', depending on your branch
+fi
+
+# Print a simple message to confirm the script ran
+echo "Pipeline executed successfully!"
